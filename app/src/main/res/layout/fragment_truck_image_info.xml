@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.trucks_image_info.TruckImageInfoFragment">
+
+    <ImageView
+        android:id="@+id/ivTruckImage"
+        android:src="@drawable/truck"
+        android:scaleType="fitXY"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvInfoDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Jul 30, 2021 at 4:22:17 PM"
+        android:textColor="@color/white"
+        android:textStyle="normal"
+        android:fontFamily="sans-serif-condensed-light"
+        android:textSize="18sp"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="6dp"
+        android:layout_marginStart="24dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textAlignment="textEnd"
+        android:lines="1"
+        android:maxLines="1"
+        android:ellipsize="end"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvInfoRegion1"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="390 S Ronald Regan Blvd"
+        android:layout_marginStart="24dp"
+        android:textColor="@color/white"
+        android:textStyle="normal"
+        android:fontFamily="sans-serif-condensed-light"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/tvInfoDate"
+        android:layout_marginTop="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="6dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textAlignment="textEnd"
+        android:lines="1"
+        android:maxLines="1"
+        android:ellipsize="end"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvInfoRegion2"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Longwood FL 32570"
+        android:textColor="@color/white"
+        android:layout_marginStart="24dp"
+        android:textStyle="normal"
+        android:fontFamily="sans-serif-condensed-light"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/tvInfoRegion1"
+        android:layout_marginTop="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="6dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textAlignment="textEnd"
+        android:lines="1"
+        android:maxLines="1"
+        android:ellipsize="end"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvInfoState"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="United States"
+        android:textColor="@color/white"
+        android:textStyle="normal"
+        android:layout_marginStart="24dp"
+        android:fontFamily="sans-serif-condensed-light"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/tvInfoRegion2"
+        android:layout_marginTop="6dp"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginEnd="6dp"
+        app:layout_constraintStart_toStartOf="parent"
+        android:textAlignment="textEnd"
+        android:lines="1"
+        android:maxLines="1"
+        android:ellipsize="end"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

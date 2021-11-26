@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.driver_details.DriverDetailsFragment">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvDriverName"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:text="Truck 345 2342 - 2021-09-21 - Daniel Speeder"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:background="#D1D1D1"
+        android:textColor="@color/black"/>
+
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/cbPrePass"
+        android:layout_marginTop="24dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvDriverName"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Pre Pass"
+        android:textStyle="bold"
+        android:layout_marginStart="24dp"/>
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/cbBasPass"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/cbPrePass"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Bas Pass"
+        android:textStyle="bold"
+        android:layout_marginStart="24dp"/>
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/cbTablet"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/cbBasPass"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="Tablet"
+        android:textStyle="bold"
+        android:layout_marginStart="24dp"/>
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/cbIFTA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/cbTablet"
+        app:layout_constraintStart_toStartOf="parent"
+        android:text="IFTA"
+        android:textStyle="bold"
+        android:layout_marginStart="24dp"/>
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/cbNYSticker"
+        android:layout_marginTop="24dp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/tvDriverName"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintHorizontal_bias="0.6"
+        android:text="NY Sticker"
+        android:textStyle="bold"
+        android:layout_marginStart="24dp"/>
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/cbDOT"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="D.O.T"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/cbNYSticker"
+        app:layout_constraintTop_toBottomOf="@id/cbNYSticker"/>
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/cbFuelCard"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fuel Card"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/cbNYSticker"
+        app:layout_constraintTop_toBottomOf="@id/cbDOT"/>
+
+    <com.google.android.material.checkbox.MaterialCheckBox
+        android:id="@+id/cbEld"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="ELD"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="@id/cbNYSticker"
+        app:layout_constraintTop_toBottomOf="@id/cbFuelCard"/>
+
+    <TextView
+        android:id="@+id/tvDriverSignature"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:text="Driver Signature:"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/cbIFTA"
+        android:layout_marginTop="24dp"/>
+
+    <com.github.gcacace.signaturepad.views.SignaturePad
+        android:id="@+id/signature"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:background="#F1F1F1"
+        app:penColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/tvDriverSignature"
+        android:layout_marginTop="24dp"/>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
