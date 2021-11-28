@@ -13,8 +13,10 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 object AppModule {
 
-    const val baseUrl = "base_url"
+    const val baseUrl = "http://base_url"
 
+    @Singleton
+    @Provides
     fun provideNetworkService(retrofit: Retrofit):NetworkService{
        return retrofit.create(NetworkService::class.java)
     }

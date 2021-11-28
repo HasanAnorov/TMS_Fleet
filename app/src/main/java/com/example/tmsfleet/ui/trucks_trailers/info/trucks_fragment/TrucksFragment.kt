@@ -11,12 +11,18 @@ import com.example.tmsfleet.ui.trucks_trailers.info.adapter.TruckAdapter
 import com.example.tmsfleet.ui.trucks_trailers.info.interfaces.OnTruckIClickListener
 import com.example.tmsfleet.ui.trucks_trailers.info.model.TruckModel
 import androidx.fragment.app.FragmentTransaction
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModelProvider
 import com.example.tmsfleet.R
 import com.example.tmsfleet.ui.new_truck_inspection_report.NewTruckInspectionReportFragment
+import dagger.hilt.android.AndroidEntryPoint
 
+@AndroidEntryPoint
 class TrucksFragment : Fragment(),OnTruckIClickListener {
 
     private lateinit var binding : FragmentTrucksBinding
+    private lateinit var adapter: TruckAdapter
+    private lateinit var viewModel: TrucksViewModel
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -24,10 +30,13 @@ class TrucksFragment : Fragment(),OnTruckIClickListener {
     ): View {
         binding = FragmentTrucksBinding.inflate(inflater,container,false)
 
+        initViewModel()
+
         val truck :ArrayList<TruckModel> = arrayListOf(
             TruckModel("THO 3452 - 2020-10-24 - Check In"),
             TruckModel("MRZ 2345 - 2020-11-30 - Check Out")
         )
+
         val adapter = TruckAdapter(this,truck)
         binding.recyclerView.adapter =adapter
 
@@ -45,5 +54,21 @@ class TrucksFragment : Fragment(),OnTruckIClickListener {
         Toast.makeText(requireContext(), "Truck name : ${truckModel.truckName}", Toast.LENGTH_SHORT).show()
     }
 
+    private fun initViewModel(){
+
+        viewModel = ViewModelProvider(requireActivity()).get(TrucksViewModel::class.java)
+        viewModel.getLiveData().observe(requireActivity(), { listData ->
+
+            if (listData!= null){
+                //  adapter = TruckAdapter(this,listData)
+                binding.recyclerView.adapter = adapter
+            }else{
+                Toast.makeText(requireContext(), "Something went wrong !", Toast.LENGTH_SHORT).show()
+            }
+
+        })
+        viewModel.loadData()
+
+    }
 
 }
