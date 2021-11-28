@@ -5,7 +5,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".ui.trucks_trailers.info.trucks_fragment.TrucksFragment">
+    tools:context=".ui.trucks_and_trailers.trucks_fragment.TrucksFragment">
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerView"

@@ -1,14 +1,14 @@
-package com.example.tmsfleet.ui.trucks_trailers.info.adapter
+package com.example.tmsfleet.ui.trucks_and_trailers.adapter
 
 import android.view.LayoutInflater
 import android.view.ViewGroup
 import androidx.recyclerview.widget.RecyclerView
 import com.example.tmsfleet.databinding.TruckListItemBinding
-import com.example.tmsfleet.ui.trucks_trailers.info.interfaces.OnTruckIClickListener
-import com.example.tmsfleet.ui.trucks_trailers.info.model.TruckModel
+import com.example.tmsfleet.ui.trucks_and_trailers.interfaces.OnTruckIClickListener
+import com.example.tmsfleet.ui.trucks_and_trailers.model.TruckModel
 import java.io.Serializable
 
-    class TruckAdapter(val listener: OnTruckIClickListener,var folders : List<TruckModel>): RecyclerView.Adapter<TruckAdapter.ViewHolderHomeFragment>() ,
+    class TruckAdapter(val listener: OnTruckIClickListener, var folders : List<TruckModel>): RecyclerView.Adapter<TruckAdapter.ViewHolderHomeFragment>() ,
         Serializable {
 
         inner class ViewHolderHomeFragment(private  var binding: TruckListItemBinding): RecyclerView.ViewHolder(binding.root){

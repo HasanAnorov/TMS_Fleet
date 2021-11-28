@@ -18,7 +18,7 @@
 
     <fragment
         android:id="@+id/trucksTrailersFragment"
-        android:name="com.example.tmsfleet.ui.trucks_trailers.info.TrucksTrailersFragment"
+        android:name="com.example.tmsfleet.ui.trucks_and_trailers.TrucksTrailersFragment"
         android:label="TMS Fleet"
         tools:layout="@layout/fragment_trucks_trailers" />
 
@@ -57,7 +57,7 @@
         tools:layout="@layout/fragment_left" />
     <fragment
         android:id="@+id/trucksFragment"
-        android:name="com.example.tmsfleet.ui.trucks_trailers.info.trucks_fragment.TrucksFragment"
+        android:name="com.example.tmsfleet.ui.trucks_and_trailers.trucks_fragment.TrucksFragment"
         android:label="TMS Fleet"
         tools:layout="@layout/fragment_trucks" />
     <fragment

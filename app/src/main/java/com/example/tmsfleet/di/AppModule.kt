@@ -13,7 +13,7 @@ import javax.inject.Singleton
 @InstallIn(SingletonComponent::class)
 object AppModule {
 
-    const val baseUrl = "http://base_url"
+    const val baseUrl = "https://picsum.photos/"
 
     @Singleton
     @Provides

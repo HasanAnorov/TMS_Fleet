@@ -1,4 +1,4 @@
-package com.example.tmsfleet.ui.trucks_trailers.info.trailers_fragment
+package com.example.tmsfleet.ui.trucks_and_trailers.trailers_fragment
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment

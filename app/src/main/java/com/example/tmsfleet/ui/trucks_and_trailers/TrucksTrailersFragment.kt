@@ -1,4 +1,4 @@
-package com.example.tmsfleet.ui.trucks_trailers.info
+package com.example.tmsfleet.ui.trucks_and_trailers
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -10,12 +10,12 @@ import androidx.viewpager.widget.ViewPager
 import com.example.tmsfleet.R
 import com.example.tmsfleet.databinding.FragmentTrucksTrailersBinding
 import com.example.tmsfleet.ui.MainActivity
-import com.example.tmsfleet.ui.trucks_trailers.info.adapter.TrucksFragmentAdapter
+import com.example.tmsfleet.ui.trucks_and_trailers.adapter.TrucksFragmentAdapter
 
 class TrucksTrailersFragment : Fragment() {
 
     private lateinit var binding: FragmentTrucksTrailersBinding
-    private lateinit var customPagerAdapter :TrucksFragmentAdapter
+    private lateinit var customPagerAdapter : TrucksFragmentAdapter
     private lateinit var viewPager:ViewPager
 
     override fun onCreateView(
