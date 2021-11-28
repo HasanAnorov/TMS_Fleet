@@ -1,6 +1,5 @@
 package com.example.tmsfleet.ui.driver_details
 
-import android.graphics.Bitmap
 import android.os.Bundle
 import android.view.*
 import android.widget.Toast
@@ -8,10 +7,7 @@ import android.widget.Toolbar
 import androidx.fragment.app.Fragment
 import com.example.tmsfleet.R
 import com.example.tmsfleet.databinding.FragmentDriverDetailsBinding
-import com.example.tmsfleet.ui.MainActivity
 import com.github.gcacace.signaturepad.views.SignaturePad
-import java.io.File
-import java.io.IOException
 
 class DriverDetailsFragment : Fragment() {
 
@@ -30,6 +26,7 @@ class DriverDetailsFragment : Fragment() {
 
         val mSignaturePad : SignaturePad = binding.signature
         mSignaturePad.setOnSignedListener(object:SignaturePad.OnSignedListener{
+
             override fun onStartSigning() {
 
             }
@@ -72,7 +69,7 @@ class DriverDetailsFragment : Fragment() {
             R.id.menu_save_button ->
                 Toast.makeText(requireContext(), "Click", Toast.LENGTH_SHORT).show()
             else ->
-                Toast.makeText(requireContext(), "Click", Toast.LENGTH_SHORT).show()
+                Toast.makeText(requireContext(), "Click1", Toast.LENGTH_SHORT).show()
         }
         return super.onOptionsItemSelected(item)
     }

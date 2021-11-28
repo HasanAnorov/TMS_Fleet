@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/mobile_navigation"
-    app:startDestination="@+id/driverDetailsFragment">
+    app:startDestination="@+id/trucksTrailersFragment">
 
     <fragment
         android:id="@+id/signInFragment"
@@ -39,5 +39,31 @@
         android:name="com.example.tmsfleet.ui.trucks_image_info.TruckImageInfoFragment"
         android:label="fragment_truck_image_info"
         tools:layout="@layout/fragment_truck_image_info" />
+    <fragment
+        android:id="@+id/truckSidesFragment"
+        android:name="com.example.tmsfleet.ui.truck_sides.TruckSidesFragment"
+        android:label="TMS Fleet"
+        tools:layout="@layout/fragment_truck_sides" />
+    <fragment
+        android:id="@+id/frontFragment"
+        android:name="com.example.tmsfleet.ui.truck_sides.front.FrontFragment"
+        android:label="TMS Fleet"
+        tools:layout="@layout/fragment_fron" />
+
+    <fragment
+        android:id="@+id/leftFragment"
+        android:name="com.example.tmsfleet.ui.truck_sides.left.LeftFragment"
+        android:label="TMS Fleet"
+        tools:layout="@layout/fragment_left" />
+    <fragment
+        android:id="@+id/trucksFragment"
+        android:name="com.example.tmsfleet.ui.trucks_trailers.info.trucks_fragment.TrucksFragment"
+        android:label="TMS Fleet"
+        tools:layout="@layout/fragment_trucks" />
+    <fragment
+        android:id="@+id/newTruckInspectionReportFragment"
+        android:name="com.example.tmsfleet.ui.new_truck_inspection_report.NewTruckInspectionReportFragment"
+        android:label="TMS Fleet"
+        tools:layout="@layout/fragment_new_truck_inspection_report" />
 
 </navigation>

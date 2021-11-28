@@ -8,7 +8,7 @@ import androidx.viewpager2.adapter.FragmentStateAdapter
 import com.example.tmsfleet.ui.trucks_trailers.info.trailers_fragment.TrailersFragment
 import com.example.tmsfleet.ui.trucks_trailers.info.trucks_fragment.TrucksFragment
 
-class TrucksAdapter(fm:FragmentManager) :FragmentStatePagerAdapter(fm,
+class TrucksFragmentAdapter(fm:FragmentManager) :FragmentStatePagerAdapter(fm,
     BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
 
 

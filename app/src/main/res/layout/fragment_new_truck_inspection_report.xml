@@ -1,0 +1,273 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.new_truck_inspection_report.NewTruckInspectionReportFragment">
+
+    <com.google.android.material.textview.MaterialTextView
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_marginTop="24dp"
+        android:id="@+id/tvNewTruckInspectionReport"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="6dp"
+        android:textAlignment="center"
+        android:text="New Truck Inspection Report"/>
+
+    <RadioGroup
+        android:id="@+id/rgCheckInOut"
+        android:layout_width="match_parent"
+        app:layout_constraintTop_toBottomOf="@id/tvNewTruckInspectionReport"
+        android:layout_marginTop="16dp"
+        android:orientation="horizontal"
+        android:layout_height="wrap_content">
+
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Check In"
+            android:layout_marginStart="16dp"
+            android:id="@+id/rbCheckIn"/>
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:id="@+id/rbCheckOut"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Check Out"
+            android:layout_marginStart="72dp"/>
+
+    </RadioGroup>
+
+    <Spinner
+        android:id="@+id/spinnerSelectTruck"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/rgCheckInOut"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp"
+        android:padding="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintWidth_percent="0.7"/>
+
+    <Spinner
+        android:id="@+id/spinnerSelectDriver"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/spinnerSelectTruck"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        android:padding="16dp"
+        app:layout_constraintWidth_percent="0.7"/>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/etInspectionDate"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/spinnerSelectDriver"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:padding="8dp"
+        android:hint="Inspection Date"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintWidth_percent="0.7"/>
+
+    <com.google.android.material.textfield.TextInputEditText
+        android:id="@+id/etMileage"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:padding="8dp"
+        android:hint="Driver Name"
+        app:layout_constraintTop_toBottomOf="@id/etInspectionDate"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginStart="16dp"
+        android:layout_marginTop="16dp"
+        app:layout_constraintWidth_percent="0.7"/>
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvDef"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Def: "
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@id/etMileage"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="24dp"/>
+
+    <RadioGroup
+        android:id="@+id/rgDef"
+        app:layout_constraintTop_toBottomOf="@id/etMileage"
+        app:layout_constraintStart_toEndOf="@id/tvDef"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="24dp"
+        android:layout_width="wrap_content"
+        android:layout_height="64dp"
+        android:orientation="horizontal">
+
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="E"
+            android:textStyle="bold"
+            style="@style/RadioWithTextOnTop"
+            android:textColor="@color/black"/>
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1/4"
+            android:textStyle="bold"
+            style="@style/RadioWithTextOnTop"
+            android:textColor="@color/black"/>
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="1/2"
+            android:textStyle="bold"
+            style="@style/RadioWithTextOnTop"
+            android:textColor="@color/black"/>
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="3/4"
+            android:textStyle="bold"
+            style="@style/RadioWithTextOnTop"
+            android:textColor="@color/black"/>
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="F"
+            android:textStyle="bold"
+            style="@style/RadioWithTextOnTop"
+            android:textColor="@color/black"/>
+
+    </RadioGroup>
+
+    <TextView
+        android:id="@+id/tvFuel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Fuel"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintTop_toBottomOf="@+id/rgDef"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginStart="36dp"
+        android:layout_marginTop="24dp"/>
+
+    <RadioGroup
+        android:id="@+id/rgFuel"
+        app:layout_constraintTop_toBottomOf="@id/rgDef"
+        app:layout_constraintStart_toEndOf="@id/tvDef"
+        android:layout_marginStart="4dp"
+        android:layout_marginTop="24dp"
+        android:layout_width="wrap_content"
+        android:layout_height="64dp"
+        android:orientation="horizontal">
+
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:layout_width="34dp"
+            android:layout_height="wrap_content"
+            android:text="E"
+            android:textStyle="bold"
+            style="@style/RadioWithTextOnTop"
+            android:textColor="@color/black"/>
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:layout_width="34dp"
+            android:layout_height="wrap_content"
+            android:text="1/4"
+            android:textStyle="bold"
+            style="@style/RadioWithTextOnTop"
+            android:textColor="@color/black"/>
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:layout_width="34dp"
+            android:layout_height="wrap_content"
+            android:text="1/2"
+            android:textStyle="bold"
+            style="@style/RadioWithTextOnTop"
+            android:textColor="@color/black"/>
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:layout_width="34dp"
+            android:layout_height="wrap_content"
+            android:text="3/8"
+            android:textStyle="bold"
+            style="@style/RadioWithTextOnTop"
+            android:textColor="@color/black"/>
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:layout_width="34dp"
+            android:layout_height="wrap_content"
+            android:text="1/2"
+            android:textStyle="bold"
+            style="@style/RadioWithTextOnTop"
+            android:textColor="@color/black"/>
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:layout_width="34dp"
+            android:layout_height="wrap_content"
+            android:text="5/8"
+            android:textStyle="bold"
+            style="@style/RadioWithTextOnTop"
+            android:textColor="@color/black"/>
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:layout_width="34dp"
+            android:layout_height="wrap_content"
+            android:text="3/4"
+            android:textStyle="bold"
+            style="@style/RadioWithTextOnTop"
+            android:textColor="@color/black"/>
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:layout_width="34dp"
+            android:layout_height="wrap_content"
+            android:text="7/8"
+            android:textStyle="bold"
+            style="@style/RadioWithTextOnTop"
+            android:textColor="@color/black"/>
+
+        <com.google.android.material.radiobutton.MaterialRadioButton
+            android:layout_width="34dp"
+            android:layout_height="wrap_content"
+            android:text="F"
+            android:textStyle="bold"
+            style="@style/RadioWithTextOnTop"
+            android:textColor="@color/black"/>
+
+    </RadioGroup>
+
+    <Button
+        android:id="@+id/btCreateReport"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Create Report"
+        android:textAllCaps="false"
+        android:textColor="@color/white"
+        android:fontFamily="sans-serif-condensed-light"
+        android:backgroundTint="#7A7A7A"
+        app:layout_constraintTop_toBottomOf="@id/rgFuel"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:textSize="12dp"
+        android:layout_marginEnd="24dp"
+        android:layout_marginTop="24dp"/>
+
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

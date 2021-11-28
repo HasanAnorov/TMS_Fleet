@@ -6,15 +6,17 @@ import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.ContextCompat
+import androidx.viewpager.widget.ViewPager
 import com.example.tmsfleet.R
 import com.example.tmsfleet.databinding.FragmentTrucksTrailersBinding
 import com.example.tmsfleet.ui.MainActivity
-import com.example.tmsfleet.ui.trucks_trailers.info.adapter.TrucksAdapter
-import com.google.android.material.tabs.TabLayoutMediator
+import com.example.tmsfleet.ui.trucks_trailers.info.adapter.TrucksFragmentAdapter
 
 class TrucksTrailersFragment : Fragment() {
 
     private lateinit var binding: FragmentTrucksTrailersBinding
+    private lateinit var customPagerAdapter :TrucksFragmentAdapter
+    private lateinit var viewPager:ViewPager
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -32,16 +34,19 @@ class TrucksTrailersFragment : Fragment() {
             ContextCompat.getColor(requireContext(), R.color.white)
 
 
-        val viewPager = binding.viewPager
+        viewPager = binding.viewPager
         val tabLayout = binding.tabLayout
 
-        val adapter = TrucksAdapter(childFragmentManager)
-        viewPager.adapter = adapter
+         customPagerAdapter = TrucksFragmentAdapter(childFragmentManager)
+        viewPager.adapter = customPagerAdapter
 
         tabLayout.setupWithViewPager(viewPager)
 
 
+
+
         return binding.root
     }
+
 
 }

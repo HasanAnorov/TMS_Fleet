@@ -16,4 +16,15 @@
     <string name="login">Login</string>
     <string name="email">Email</string>
     <string name="daniel_speeder">Daniel Speeder</string>
+    <string name="add">Add</string>
+
+    <string-array name="damage_type">
+        <item>Scratch</item>
+        <item>Dent</item>
+        <item>Bend</item>
+        <item>Hole</item>
+        <item>Crack</item>
+        <item>Chip</item>
+        <item>Missing</item>
+    </string-array>
 </resources>

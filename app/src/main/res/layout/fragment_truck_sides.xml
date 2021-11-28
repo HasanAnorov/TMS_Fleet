@@ -4,33 +4,40 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    tools:context=".ui.trucks_trailers.info.TrucksTrailersFragment">
+    tools:context=".ui.truck_sides.TruckSidesFragment">
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/tvDriverName"
+        app:layout_constraintTop_toTopOf="parent"
+        android:layout_width="match_parent"
+        android:layout_height="54dp"
+        android:text="Truck 345 2342 - 2021-09-21 - Daniel Speeder"
+        android:gravity="center"
+        android:textStyle="bold"
+        android:background="#D1D1D1"
+        android:textColor="@color/black"/>
 
     <com.google.android.material.tabs.TabLayout
         android:id="@+id/tabLayout"
-        app:layout_constraintTop_toBottomOf="@id/filterByTruck"
+        app:layout_constraintTop_toBottomOf="@id/tvDriverName"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         android:layout_width="match_parent"
         app:tabMode="fixed"
+        app:tabSelectedTextColor="@color/white"
+        app:tabBackground="@drawable/tab_color_selector"
         app:tabTextAppearance="@android:style/TextAppearance.Widget.TabWidget"
-        app:tabIndicatorColor="@color/black"
         android:layout_height="wrap_content"
+
         app:tabTextColor="@color/black" />
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/filterByTruck"
+    <LinearLayout
+        android:orientation="vertical"
+        android:id="@+id/wholeIndicator"
         android:layout_width="match_parent"
-        android:layout_height="52dp"
-        app:cornerRadius="0dp"
-        android:insetBottom="0dp"
-        android:insetTop="0dp"
-        app:layout_constraintTop_toTopOf="parent"
-        android:text="Filter By Truck"
-        android:textAlignment="textEnd"
-        android:textAllCaps="false"
-        android:drawableTint="@color/white"
-        android:drawableEnd="@drawable/ic_baseline_search_24"/>
+        android:layout_height="2dp"
+        android:background="@color/purple_200"
+        app:layout_constraintTop_toBottomOf="@id/tabLayout"/>
 
     <androidx.viewpager.widget.ViewPager
         android:id="@+id/viewPager"
@@ -39,8 +46,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/tabLayout" />
-
-
+        app:layout_constraintTop_toBottomOf="@id/wholeIndicator" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
