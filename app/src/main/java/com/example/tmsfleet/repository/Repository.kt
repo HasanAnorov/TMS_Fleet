@@ -12,5 +12,4 @@ class Repository @Inject constructor(private val networkService: NetworkService)
         return networkService.getAllData()
 
     }
-
 }

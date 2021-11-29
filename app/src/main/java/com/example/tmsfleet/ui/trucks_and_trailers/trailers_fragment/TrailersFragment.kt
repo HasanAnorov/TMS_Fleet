@@ -15,10 +15,8 @@ class TrailersFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-        binding =  FragmentTrailersBinding.inflate(inflater,container,false)
-
+        binding = FragmentTrailersBinding.inflate(inflater, container, false)
 
         return binding.root
     }
-
 }

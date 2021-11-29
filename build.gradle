@@ -20,4 +20,7 @@ buildscript {
 task clean(type: Delete) {
     delete rootProject.buildDir
 }
+ext{
+    picassoVersion = '2.71828'
+}
 

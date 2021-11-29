@@ -17,10 +17,7 @@ class LeftFragment : Fragment() {
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View {
-
         binding = FragmentLeftBinding.inflate(inflater,container,false)
-
-
 
         return binding.root
     }

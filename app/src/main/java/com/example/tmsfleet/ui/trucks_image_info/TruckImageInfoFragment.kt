@@ -5,7 +5,6 @@ import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
-import com.example.tmsfleet.R
 import com.example.tmsfleet.databinding.FragmentTruckImageInfoBinding
 
 class TruckImageInfoFragment : Fragment() {
@@ -18,9 +17,6 @@ class TruckImageInfoFragment : Fragment() {
     ): View {
         binding = FragmentTruckImageInfoBinding.inflate(inflater,container,false)
 
-
-
         return binding.root
     }
-
 }

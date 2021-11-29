@@ -18,9 +18,6 @@ class RightFragment : Fragment() {
     ): View {
         binding = FragmentRightBinding.inflate(inflater,container,false)
 
-
-
         return binding.root
     }
-
 }

@@ -24,13 +24,8 @@ class FrontFragment : Fragment() {
 
             }
 
-            override fun onNothingSelected(p0: AdapterView<*>?) {
-
-            }
-
+            override fun onNothingSelected(p0: AdapterView<*>?) {   }
         }
-
         return binding.root
     }
-
 }

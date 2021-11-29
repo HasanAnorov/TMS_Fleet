@@ -19,8 +19,6 @@ class BackFragment : Fragment() {
     ): View {
         binding = FragmentBackBinding.inflate(inflater,container,false)
 
-
-
         return binding.root
     }
 

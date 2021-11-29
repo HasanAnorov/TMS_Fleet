@@ -42,11 +42,6 @@ class TrucksTrailersFragment : Fragment() {
 
         tabLayout.setupWithViewPager(viewPager)
 
-
-
-
         return binding.root
     }
-
-
 }

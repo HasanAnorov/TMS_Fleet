@@ -20,16 +20,10 @@ class DriverDetailsFragment : Fragment() {
         binding = FragmentDriverDetailsBinding.inflate(inflater,container,false)
         setHasOptionsMenu(true)
 
-        val toolbar = view?.findViewById<Toolbar>(R.id.toolbar)
-
-
-
         val mSignaturePad : SignaturePad = binding.signature
         mSignaturePad.setOnSignedListener(object:SignaturePad.OnSignedListener{
 
-            override fun onStartSigning() {
-
-            }
+            override fun onStartSigning() {     }
 
             override fun onSigned() {
 //                val signatureBitmap = mSignaturePad.signatureBitmap
@@ -47,10 +41,7 @@ class DriverDetailsFragment : Fragment() {
 //                }
 
             }
-
-            override fun onClear() {
-
-            }
+            override fun onClear() {    }
 
         })
 
@@ -73,6 +64,5 @@ class DriverDetailsFragment : Fragment() {
         }
         return super.onOptionsItemSelected(item)
     }
-
 
 }

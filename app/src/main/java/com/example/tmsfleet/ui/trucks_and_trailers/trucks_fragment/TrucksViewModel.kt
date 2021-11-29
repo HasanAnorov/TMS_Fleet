@@ -26,5 +26,4 @@ class TrucksViewModel @Inject constructor(
             data.postValue(it)
         }
     }
-
 }

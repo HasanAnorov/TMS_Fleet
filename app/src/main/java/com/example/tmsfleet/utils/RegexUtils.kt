@@ -16,5 +16,4 @@ object Validator {
     fun isValidEmail(email: String): Boolean {
         return EMAIL_ADDRESS.matcher(email).matches()
     }
-
 }

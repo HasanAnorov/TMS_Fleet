@@ -82,7 +82,5 @@ class SignInFragment : Fragment() {
             findNavController().popBackStack(R.id.signInFragment,true)
             findNavController().navigate(R.id.trucksTrailersFragment)
         }
-
     }
-
 }

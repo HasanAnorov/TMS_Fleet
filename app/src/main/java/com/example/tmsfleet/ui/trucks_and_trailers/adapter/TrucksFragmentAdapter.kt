@@ -9,7 +9,6 @@ import com.example.tmsfleet.ui.trucks_and_trailers.trucks_fragment.TrucksFragmen
 class TrucksFragmentAdapter(fm:FragmentManager) :FragmentStatePagerAdapter(fm,
     BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
 
-
     override fun getCount(): Int = 2
 
     override fun getItem(position: Int): Fragment {
@@ -27,5 +26,4 @@ class TrucksFragmentAdapter(fm:FragmentManager) :FragmentStatePagerAdapter(fm,
             else -> "Trucks"
         }
     }
-
 }

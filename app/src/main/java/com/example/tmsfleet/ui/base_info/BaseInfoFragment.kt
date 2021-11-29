@@ -22,5 +22,4 @@ class BaseInfoFragment : Fragment() {
 
         return binding.root
     }
-
 }

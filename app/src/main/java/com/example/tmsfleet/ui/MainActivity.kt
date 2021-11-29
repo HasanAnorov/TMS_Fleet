@@ -25,7 +25,6 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
         setSupportActionBar(binding.appBarMain.toolbar)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
 
@@ -36,14 +35,17 @@ class MainActivity : AppCompatActivity() {
         // menu should be considered as top level destinations.
         appBarConfiguration = AppBarConfiguration(
             setOf(
-               R.id.signInFragment,R.id.trucksTrailersFragment
+               R.id.signInFragment,
+                R.id.trucksTrailersFragment,
+                R.id.baseInfoFragment,
+                R.id.newTruckInspectionReportFragment,
+                R.id.driverDetailsFragment,
+                R.id.truckSidesFragment
             ), drawerLayout
         )
+
         setupActionBarWithNavController(navController, appBarConfiguration)
         navView.setupWithNavController(navController)
-
-
-
 
     }
 

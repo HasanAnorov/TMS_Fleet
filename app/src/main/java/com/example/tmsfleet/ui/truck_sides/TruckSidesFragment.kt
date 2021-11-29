@@ -30,7 +30,6 @@ class TruckSidesFragment : Fragment() {
         (activity as MainActivity).window.navigationBarColor =
             ContextCompat.getColor(requireContext(), R.color.white)
 
-
         val viewPager = binding.viewPager
         val tabLayout = binding.tabLayout
 
@@ -39,7 +38,6 @@ class TruckSidesFragment : Fragment() {
 
         tabLayout.setupWithViewPager(viewPager)
         tabLayout.setSelectedTabIndicatorHeight(0)
-
 
         return binding.root
     }
@@ -58,6 +56,4 @@ class TruckSidesFragment : Fragment() {
         }
         return super.onOptionsItemSelected(item)
     }
-
-
 }

@@ -18,7 +18,6 @@ import java.io.Serializable
                 binding.root.setOnClickListener {
                     listener.onTruckItemClickListener(model)
                 }
-
             }
         }
 
